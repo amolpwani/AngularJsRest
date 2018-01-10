@@ -1,15 +1,18 @@
 package com.ford.afd.controller;
 
 
-import com.ford.afd.model.Catagory;
-import com.ford.afd.model.ListData;
-import com.ford.afd.repository.CatagoryRepository;
-import com.ford.afd.repository.ListDataRepository;
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.ford.afd.model.Catagory;
+import com.ford.afd.repository.CatagoryRepository;
 
 /**
  * Created by dchiruma on 12/26/2017.

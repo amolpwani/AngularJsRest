@@ -21,7 +21,7 @@ public class Catagory {
     private String description;
     private boolean active;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "category")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "catagory")
     private Set<Mapping> mappings = new HashSet<>();
 
     public long getId() {

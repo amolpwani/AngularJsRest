@@ -14,9 +14,7 @@ public class Mapping {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="catagory_id",nullable = false)
-    private Catagory category;
-    
-    private Integer categoryId;
+    private Catagory catagory;
 
     public long getId() {
         return id;
@@ -50,19 +48,11 @@ public class Mapping {
  		this.numberOfRows = numberOfRows;
  	}
 
-    public Integer getCatagoryId() {
-        return categoryId;
-    }
-
-    public void setCatagoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
-
-	public Catagory getCategory() {
-		return category;
+	public Catagory getCatagory() {
+		return catagory;
 	}
 
-	public void setCategory(Catagory category) {
-		this.category = category;
+	public void setCatagory(Catagory category) {
+		this.catagory = category;
 	}
 }

@@ -31,11 +31,10 @@ angular.module('app.controllers', []).controller('DirectListController', functio
 	$scope.maappings = MappingData.query();
     $scope.mappingData = new MappingData();
     $scope.catagories = CatagoryData.query();
-    var catagory = CatagoryData.get({ id: $stateParams.id});
+    $scope.catagory = CatagoryData.get({ id: $stateParams.id});
     
     $scope.createMappingData = function() {
-    	$scope.mappingData.catagoryId = $stateParams.id;
-    	$scope.mappingData.catagory = catagory;
+    	$scope.mappingData.catagory = $scope.catagory;
 	    $scope.mappingData.$save(function() {
 	    $state.go('directmappings');
     });
