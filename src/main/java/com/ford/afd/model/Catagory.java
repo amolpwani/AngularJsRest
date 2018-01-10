@@ -1,8 +1,15 @@
 package com.ford.afd.model;
 
-import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Catagory {
@@ -14,8 +21,8 @@ public class Catagory {
     private String description;
     private boolean active;
 
-    /*@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "listdata")
-    private Set<ListDataItems> listDataItems = new HashSet<>();*/
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "category")
+    private Set<Mapping> mappings = new HashSet<>();
 
     public long getId() {
         return id;
@@ -49,12 +56,12 @@ public class Catagory {
 		this.description = description;
 	}
 
-    /*public Set<ListDataItems> getListDataItems() {
-        return listDataItems;
-    }
+	public Set<Mapping> getMappings() {
+		return mappings;
+	}
 
-    public void setListDataItems(Set<ListDataItems> listDataItems) {
-        this.listDataItems = listDataItems;
-    }*/
+	public void setMappings(Set<Mapping> mappings) {
+		this.mappings = mappings;
+	}
 }
 

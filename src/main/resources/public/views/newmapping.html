@@ -1,0 +1,30 @@
+<div class="container pad-top">
+	<h2>
+	Add Mapping
+	</h2>
+    <form class="form-horizontal" role="form" ng-submit="createMappingData()">
+        <div class="form-group">
+		    <label for="routineCode" class="col-sm-2 control-label">Routine Code</label>
+		    <div class="col-sm-10">
+		        <input type="text" ng-model="mappingdata.routineCode" class="form-control" id="routineCode" placeholder="Enter Routine Code"/>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <label for="screenName" class="col-sm-2 control-label">Screen Name</label>
+		    <div class="col-sm-10">
+		        <input type="text" ng-model="mappingdata.screenName" class="form-control" id="screenName" placeholder="Enter Screen Name"/>
+		    </div>
+		</div>
+		<div class="form-group">
+			<label for="numberOfRows" class="col-sm-2 control-label">Number Of Rows</label>
+		    <div class="col-sm-10">
+		        <input type="text" ng-model="mappingdata.numberOfRows" class="form-control" id="numberOfRows" placeholder="Enter Number Of Rows"/>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		        <input type="submit" class="btn btn-primary" value="Save"/>
+		    </div>
+		</div>
+    </form>
+</div>

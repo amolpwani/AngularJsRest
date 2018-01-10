@@ -1,0 +1,29 @@
+<h2>
+Manage Mapping
+</h2>
+<br>
+<a ui-sref="newmapping({id:catagory.id})" ng-controller="mappinglist" class="btn-primary btn-lg nodecoration">Create New Mapping</a>
+<br>
+ <table width="200" border="1" align="center">
+     <tbody>
+     <tr align="center">
+         <td>
+         &nbsp;<input type="text" ng-model="mappingsea" align="center" class="inputText" placeholder="Search">
+         </td>
+     </tr>
+     <tr>
+    	 <td align="center"><label>Action</label></td>
+         <td align="center"><label>RoutineCode</label></td>
+         <td align="center"><label>ScreenName</label></td>
+         <td align="center"><label>Number Of Rows</label></td>
+     </tr>
+     <tr ng-repeat="mapping in mappings | filter:catagorysea">
+     	 <td align="center">&nbsp;<a class="btn btn-primary" ui-sref="viewmapping({id:mapping.id})">View</a></td>
+         <td align="center">{{mapping.routineCode}}</td>
+         <td align="center">{{mapping.screenName}}</td>
+         <td align="center">{{mapping.numberOfRows}}</td>
+         </td>
+     </tr>
+     </tbody>
+ </table>
+ <h4 align="center"></h4>

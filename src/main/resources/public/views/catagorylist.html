@@ -18,7 +18,10 @@ Manage Catagories
          <td align="center"><label>Active</label></td>
      </tr>
      <tr ng-repeat="catagory in catagories | filter:catagorysea">
-     	 <td align="center">&nbsp;<a class="btn btn-primary" ui-sref="viewcatagory({id:catagory.id})">View</a></td>
+     	 <td align="center">&nbsp;
+     	 	<a class="btn btn-primary" ui-sref="viewcatagory({id:catagory.id})">View Catagory</a>
+     	 	<a class="btn btn-primary" ui-sref="directmappings({id:catagory.id})">Manage Catagory</a>
+     	 </td>
          <td align="center">{{catagory.name}}</td>
          <td align="center">{{catagory.description}}</td>
          <td align="center">{{catagory.active}}</td>

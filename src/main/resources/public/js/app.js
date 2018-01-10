@@ -64,6 +64,18 @@
             url:'/CATAGORIES/newcatagory:id/view',
             templateUrl: viewsPrefix + 'newcatagory-view.html',
             controller:'updatenewcatagory'
+        }).state('directmappings',{
+            url:'/MAPPINGS:id',
+            templateUrl: viewsPrefix + 'mappinglist.html',
+            controller:'mappinglist'
+       }).state('newmapping',{
+            url:'/MAPPINGS/newmapping:id',
+            templateUrl: viewsPrefix + 'newmapping.html',
+            controller:'mappinglist'
+        }).state('viewmappping',{
+            url:'/MAPPINGS/newmaappping:id/view',
+            templateUrl: viewsPrefix + 'newmapping-view.html',
+            controller:'updatenewmapping'
         }).state('newitem',{
            url:'/LIST/newitem?id',
            templateUrl: viewsPrefix + 'newitem.html',

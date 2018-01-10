@@ -15,6 +15,7 @@ public class ListDataItems {
     /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="LISTID",nullable = false)
     private ListData listData;*/
+    
     private Integer listId;
 
     public long getId() {

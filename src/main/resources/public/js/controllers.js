@@ -27,6 +27,29 @@ angular.module('app.controllers', []).controller('DirectListController', functio
     	 $scope.catagory = CatagoryData.get({ id: $stateParams.id });
      };
      $scope.loadnewcatagory();
+}).controller('mappinglist',function($scope, $state, $stateParams, MappingData, CatagoryData) {
+	$scope.maappings = MappingData.query();
+    $scope.mappingData = new MappingData();
+    $scope.catagories = CatagoryData.query();
+    var catagory = CatagoryData.get({ id: $stateParams.id});
+    
+    $scope.createMappingData = function() {
+    	$scope.mappingData.catagoryId = $stateParams.id;
+    	$scope.mappingData.catagory = catagory;
+	    $scope.mappingData.$save(function() {
+	    $state.go('directmappings');
+    });
+ };
+}).controller('updatenewmapping', function($scope, $state, $stateParams, MappingData) {
+	 $scope.updateMappingData = function() {
+		 $scope.newmapping.$update(function() {
+		 $state.go('directmapppings');
+	       });
+     };
+     $scope.loadnewmappping = function() {
+    	 $scope.mapping = MappingData.get({ id: $stateParams.id });
+     };
+     $scope.loadnewmappping();
 }).controller('newlistitem',function($scope,$http,$rootScope,$state,$timeout,$stateParams,popupService,ListDataItems,ListData) {
       var listid=$stateParams.id;
 

@@ -10,6 +10,12 @@ angular.module('app.services', []).factory('ListData', function($resource) {
        method: 'PUT'
    }
    });
+}).service('MappingData', function($resource) {
+   return $resource('/mapping/getList/:id', { id: '@id' }, {
+   update: {
+       method: 'PUT'
+   }
+   });
 }).service('ListDataItems', function($resource) {
    return $resource('/listdataitems/getItems/:id', { id: '@id' }, {
    update: {
